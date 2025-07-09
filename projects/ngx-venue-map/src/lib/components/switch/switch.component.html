@@ -1,0 +1,9 @@
+<label class="switch">
+  <input
+    type="checkbox"
+    [checked]="checked()"
+    (change)="onChange($event)"
+    class="sr-only switch-input"
+  />
+  <div class="switch-indicator" [ngClass]="className()"></div>
+</label>

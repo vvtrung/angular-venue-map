@@ -1,0 +1,32 @@
+{
+  "name": "ngx-venue-map",
+  "version": "0.0.2",
+  "description": "Interactive venue seating map component for Angular applications",
+  "keywords": [
+    "angular",
+    "venue",
+    "seating",
+    "map",
+    "venue",
+    "interactive",
+    "canvas",
+    "fabric",
+    "concert",
+    "sports"
+  ],
+  "homepage": "https://github.com/vvtrung/angular-venue-map#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvtrung/angular-venue-map.git"
+  },
+  "license": "MIT",
+  "author": "Trung Vo <vo.van.trung.0196@gmail.com>",
+  "peerDependencies": {
+    "@angular/common": "^20.0.0",
+    "@angular/core": "^20.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}

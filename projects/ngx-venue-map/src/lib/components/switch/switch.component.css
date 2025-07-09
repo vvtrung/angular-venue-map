@@ -1,0 +1,78 @@
+/* Converted from switch.component.scss */
+.switch {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.switch-input:checked ~ .switch-indicator {
+  background-color: #707086;
+}
+
+.switch-input:checked ~ .switch-indicator::after {
+  transform: translate(100%, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D'10'%20height%3D'8'%20viewBox%3D'0%200%2010%208'%20fill%3D'none'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20fill-rule%3D'evenodd'%20clip-rule%3D'evenodd'%20d%3D'M8.3589%200.298767L3.54253%205.03255L1.64707%203.16783L0.285767%204.49762L3.54236%207.7014L9.71297%201.63087L8.3589%200.298767Z'%20fill%3D'%23112'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 8px;
+  inset-inline-start: 6px;
+}
+
+.switch-input:checked ~ .switch-indicator.bg-black {
+  background-color: #112;
+}
+
+.switch-input:checked ~ .switch-indicator.bg-black::after {
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2210%22%20viewBox%3D%220%200%2012%2010%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M4.0001%207.7799L1.2201%204.9999L0.273438%205.9399L4.0001%209.66656L12.0001%201.66656L11.0601%200.726562L4.0001%207.7799Z%22%20fill%3D%22%23111122%22/%3E%3C/svg%3E");
+}
+
+.switch-indicator {
+  position: relative;
+  border-radius: 1rem;
+  transition: transform;
+  background-color: #969696;
+  width: 3rem;
+  height: 1.5rem;
+}
+
+.switch-indicator::after {
+  content: '';
+  position: absolute;
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #fff;
+  border-width: 1px;
+  border-color: #fff;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  top: 0.125rem;
+  inset-inline-start: 2px;
+}
+
+.switch-indicator-medium {
+  width: 3.25rem;
+  height: 2rem;
+}
+
+.switch-indicator-medium::after {
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 0.25rem;
+  left: 0.25rem;
+}
+
+.switch-input:checked ~ .switch-indicator-medium::after {
+  transform: translate(calc(100% - 6px), 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+}
+
+.switch .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

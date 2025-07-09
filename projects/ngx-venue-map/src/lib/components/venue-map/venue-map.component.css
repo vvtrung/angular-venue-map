@@ -1,0 +1,84 @@
+/* Converted from stadium-map.component.scss */
+.map__container {
+  width: 100%;
+}
+
+.map__grades {
+  position: relative;
+}
+
+.map__switch-price {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.map__switch-label {
+  color: #707086;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+
+.map__minimap {
+  width: 6rem;
+  height: 5rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f8f8fa;
+  border-radius: 0.5rem;
+}
+
+.map__minimap.hidden {
+  display: none;
+}
+
+.btn-zoom {
+  display: flex;
+  flex-direction: column;
+  height: 82px;
+  width: 2.25rem;
+  background-color: #fff;
+  border-radius: 9999px;
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+.btn-zoom button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5625rem;
+  padding: 0;
+  margin: 0;
+  padding-block: 0;
+  cursor: pointer;
+  border-color: transparent;
+  background-color: transparent;
+  background-image: none;
+}
+
+.btn-zoom .line-btn-zoom {
+  width: 2.25rem;
+  border: 1px solid #f8f8fa;
+}
+
+.btn-zoom .disable-btn-zoom {
+  opacity: 0.25;
+  cursor: none;
+}
+
+.switch__item {
+  width: 3.25rem;
+  border-color: #707086;
+  border: 2px solid #707086;
+}

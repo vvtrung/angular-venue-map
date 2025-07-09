@@ -1,0 +1,16 @@
+<div class="demo-controls">
+  <button
+    (click)="toggleImageMode()"
+    class="toggle-button"
+    [class.active]="useMultiImage">
+    {{ useMultiImage ? 'Switch to Single Image' : 'Switch to Multi-Part Image' }}
+  </button>
+  <p class="demo-info">
+    Current mode: {{ useMultiImage ? 'Multi-part image (4 tiles: 2x2 grid)' : 'Single image' }}
+  </p>
+</div>
+
+<ngx-venue-map
+  [grades]="$any(grades)"
+  [mapConfiguration]="$any(mapConfig)"
+></ngx-venue-map>

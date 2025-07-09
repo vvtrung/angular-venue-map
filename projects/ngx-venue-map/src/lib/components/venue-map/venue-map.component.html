@@ -1,0 +1,62 @@
+<div #mapContainer class="map__container">
+  <div class="map__grades">
+    <canvas #htmlCanvas id="c"></canvas>
+  </div>
+  <canvas
+    #miniMap
+    class="map__minimap"
+    id="miniMap"
+    [class.hidden]="!mapService.showMiniMap()"
+  ></canvas>
+  <div
+    class="map__switch-price"
+    *ngIf="
+      !isLoading() && mapService.canvas
+    "
+  >
+    <span class="map__switch-label">Show Price</span>
+    <app-switch
+      [checked]="venueMapType() === VenueMapType.GRADE_PRICE"
+      [handleOnChange]="onChangeGradeMapType.bind(this)"
+      className="bg-black"
+    ></app-switch>
+  </div>
+  <div
+    class="btn-zoom"
+  >
+    <button
+      [disabled]="mapService.disableZoomIn()"
+      (click)="mapService.handleZoomBtn('zoomIn')"
+    >
+      <svg
+        [class.disable-btn-zoom]="mapService.disableZoomIn()"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9.6 0H6.4V6.4H0V9.6H6.4V16H9.6V9.6H16V6.4H9.6V0Z"
+          fill="#707086"
+        />
+      </svg>
+    </button>
+    <hr class="line-btn-zoom" />
+    <button
+      [disabled]="mapService.disableZoomOut()"
+      (click)="mapService.handleZoomBtn('zoomOut')"
+    >
+      <svg
+        [class.disable-btn-zoom]="mapService.disableZoomOut()"
+        width="16"
+        height="3"
+        viewBox="0 0 16 3"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M0 0V3H16V0H0Z" fill="#707086" />
+      </svg>
+    </button>
+  </div>
+</div>
