@@ -574,11 +574,10 @@ export class VenueMapCanvasService {
   // PUBLIC METHODS - MINIMAP
   // ============================================================================
 
-  public initializeMiniMap(miniCanvasElement: HTMLCanvasElement): void {
-    if (!this.canvas || !miniCanvasElement) return;
+  public initializeMiniMap(): void {
+    if (!this.canvas) return;
 
-    this.miniMapService.initializeMiniMap(
-      miniCanvasElement,
+    this.miniMapCanvas = this.miniMapService.initializeMiniMap(
       this.mapWidth,
       {
         width: this.viewDimensions.width,
@@ -587,18 +586,13 @@ export class VenueMapCanvasService {
       },
       this.mapConfig
     );
-    this.miniMapCanvas = this.miniMapService.miniMapCanvas;
-    this.renderMiniMap();
-  }
 
-  private renderMiniMap(): void {
-    if (!this.canvas) return;
     this.miniMapService.renderMiniMap(this.canvas);
     this.showDisplayViewportMap();
   }
 
   public showDisplayViewportMap(): void {
-    if (!this.canvas || !this.miniMapService.miniMapCanvas) return;
+    if (!this.canvas || !this.miniMapCanvas) return;
 
     this.miniMapService.showViewportRect(
       this.canvas.viewportTransform,

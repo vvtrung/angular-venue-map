@@ -21,13 +21,10 @@ export class VenueMapMiniMapService {
    * Initializes the mini map canvas with the specified element
    */
   public initializeMiniMap(
-    miniCanvasElement: HTMLCanvasElement,
     mapWidth: number,
     viewDimensions: { width: number; height: number; scale: number },
     mapConfig: MapConfiguration
-  ): void {
-    if (!miniCanvasElement) return;
-
+  ): fabric.StaticCanvas {
     const miniMapScale = mapConfig.minimap.scale;
     const containerHeight = viewDimensions.height;
 
@@ -35,6 +32,8 @@ export class VenueMapMiniMapService {
       width: scaleValue(mapWidth, viewDimensions.scale) * miniMapScale,
       height: containerHeight * miniMapScale,
     });
+
+    return this.miniMapCanvas;
   }
 
   /**

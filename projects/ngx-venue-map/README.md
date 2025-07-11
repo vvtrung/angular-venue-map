@@ -5,8 +5,10 @@
 **Interactive venue seating map component for Angular applications**
 
 *Perfect for sports venues, concert halls, theaters, and event booking platforms*
-
 </div>
+
+### If you like this project, ☕ [buy me a coffee](https://buymeacoffee.com/vvtrung)
+
 
 ## ✨ Features
 
@@ -374,7 +376,7 @@ We welcome contributions! Please follow these steps:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://raw.githubusercontent.com/vvtrung/angular-venue-map/refs/heads/main/projects/ngx-venue-map/LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
