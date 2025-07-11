@@ -71,9 +71,6 @@ export class VenueMapComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('htmlCanvas', { static: true })
   canvasRef!: ElementRef<HTMLCanvasElement>;
 
-  @ViewChild('miniMap', { static: true })
-  miniCanvasRef!: ElementRef<HTMLCanvasElement>;
-
   @ViewChild('mapContainer')
   mapContainer!: ElementRef<HTMLElement>;
 
@@ -82,7 +79,7 @@ export class VenueMapComponent implements OnInit, AfterViewInit, OnDestroy {
 
   // Signal-based State Management
   private readonly gradeService = inject(VenueMapGradeService);
-  private readonly canvasService = inject(VenueMapCanvasService);
+  readonly canvasService = inject(VenueMapCanvasService);
 
   // Computed Signals
   resolvedMapConfiguration = computed(() => {
@@ -415,7 +412,7 @@ export class VenueMapComponent implements OnInit, AfterViewInit, OnDestroy {
    * Renders the map focus and initializes mini map.
    */
   private renderMapFocus(resolve: () => void): void {
-    this.canvasService.initializeMiniMap(this.miniCanvasRef.nativeElement);
+    this.canvasService.initializeMiniMap();
     this.canvasService.adjustViewToCenter(() => {
       resolve();
     });
@@ -472,13 +469,6 @@ export class VenueMapComponent implements OnInit, AfterViewInit, OnDestroy {
   // ============================================================================
   // PUBLIC METHODS
   // ============================================================================
-
-  /**
-   * Gets the canvas service for template access.
-   */
-  get mapService() {
-    return this.canvasService;
-  }
 
   /**
    * Handles changes to grade map display.

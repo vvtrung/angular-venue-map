@@ -1,6 +1,6 @@
 {
   "name": "ngx-venue-map",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Interactive venue seating map component for Angular applications",
   "keywords": [
     "angular",

@@ -1,13 +1,13 @@
-/* Converted from stadium-map.component.scss */
-.map__container {
+/* Refactored from map__ prefix to venue__ prefix */
+.venue__container {
   width: 100%;
 }
 
-.map__grades {
+.venue__grades {
   position: relative;
 }
 
-.map__switch-price {
+.venue__switch-price {
   position: absolute;
   bottom: 1.25rem;
   left: 1.25rem;
@@ -19,13 +19,13 @@
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
-.map__switch-label {
+.venue__switch-label {
   color: #707086;
   font-size: 0.875rem;
   margin-right: 0.5rem;
 }
 
-.map__minimap {
+.venue__minimap {
   width: 6rem;
   height: 5rem;
   position: absolute;
@@ -36,11 +36,11 @@
   border-radius: 0.5rem;
 }
 
-.map__minimap.hidden {
+.venue__minimap.hidden {
   display: none;
 }
 
-.btn-zoom {
+.venue__zoom-controls {
   display: flex;
   flex-direction: column;
   height: 82px;
@@ -53,7 +53,7 @@
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
-.btn-zoom button {
+.venue__zoom-controls button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,17 +67,17 @@
   background-image: none;
 }
 
-.btn-zoom .line-btn-zoom {
+.venue__zoom-controls .venue__zoom-divider {
   width: 2.25rem;
   border: 1px solid #f8f8fa;
 }
 
-.btn-zoom .disable-btn-zoom {
+.venue__zoom-controls .venue__zoom-disabled {
   opacity: 0.25;
   cursor: none;
 }
 
-.switch__item {
+.venue__switch-item {
   width: 3.25rem;
   border-color: #707086;
   border: 2px solid #707086;

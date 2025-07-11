@@ -1,20 +1,20 @@
-<div #mapContainer class="map__container">
-  <div class="map__grades">
+<div #mapContainer class="venue__container">
+  <div class="venue__grades">
     <canvas #htmlCanvas id="c"></canvas>
   </div>
   <canvas
     #miniMap
-    class="map__minimap"
+    class="venue__minimap"
     id="miniMap"
-    [class.hidden]="!mapService.showMiniMap()"
+    [class.hidden]="!canvasService.showMiniMap()"
   ></canvas>
   <div
-    class="map__switch-price"
+    class="venue__switch-price"
     *ngIf="
-      !isLoading() && mapService.canvas
+      !isLoading() && canvasService.canvas
     "
   >
-    <span class="map__switch-label">Show Price</span>
+    <span class="venue__switch-label">Show Price</span>
     <app-switch
       [checked]="venueMapType() === VenueMapType.GRADE_PRICE"
       [handleOnChange]="onChangeGradeMapType.bind(this)"
@@ -22,14 +22,14 @@
     ></app-switch>
   </div>
   <div
-    class="btn-zoom"
+    class="venue__zoom-controls"
   >
     <button
-      [disabled]="mapService.disableZoomIn()"
-      (click)="mapService.handleZoomBtn('zoomIn')"
+      [disabled]="canvasService.disableZoomIn()"
+      (click)="canvasService.handleZoomBtn('zoomIn')"
     >
       <svg
-        [class.disable-btn-zoom]="mapService.disableZoomIn()"
+        [class.venue__zoom-disabled]="canvasService.disableZoomIn()"
         width="16"
         height="16"
         viewBox="0 0 16 16"
@@ -42,13 +42,13 @@
         />
       </svg>
     </button>
-    <hr class="line-btn-zoom" />
+    <hr class="venue__zoom-divider" />
     <button
-      [disabled]="mapService.disableZoomOut()"
-      (click)="mapService.handleZoomBtn('zoomOut')"
+      [disabled]="canvasService.disableZoomOut()"
+      (click)="canvasService.handleZoomBtn('zoomOut')"
     >
       <svg
-        [class.disable-btn-zoom]="mapService.disableZoomOut()"
+        [class.venue__zoom-disabled]="canvasService.disableZoomOut()"
         width="16"
         height="3"
         viewBox="0 0 16 3"
